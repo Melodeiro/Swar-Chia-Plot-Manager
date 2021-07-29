@@ -101,6 +101,7 @@ while has_active_jobs_and_work(jobs):
             else:
                 del running_work[pid]
                 job.total_running = job.total_running - 1
+                job.total_completed += 1
 
         job.running_work = non_zombie_work
 
