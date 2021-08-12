@@ -16,7 +16,10 @@ def _get_metrics(instrumentation_settings):
         COUNTER_PLOTS_COMPLETED = Counter('chia_completed_plots', 'Total completed plots', ['hostname', 'queue'])
         port = instrumentation_settings.get('prometheus_port', 9090)
         logging.info(f'Prometheus port: {port}')
-        start_http_server(port)
+        try:
+            start_http_server(port)
+        except:
+            print("Prometheus http server error")
         PROCESSED = True
 
 
