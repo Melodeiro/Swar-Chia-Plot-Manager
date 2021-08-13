@@ -4,6 +4,7 @@ import psutil
 
 from datetime import datetime, timedelta
 
+from plotmanager.library.utilities.instrumentation import increment_plots_completed
 from plotmanager.library.parse.configuration import get_config_info
 from plotmanager.library.utilities.jobs import has_active_jobs_and_work, load_jobs, monitor_jobs_to_start
 from plotmanager.library.utilities.log import check_log_progress
