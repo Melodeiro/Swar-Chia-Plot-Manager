@@ -102,6 +102,7 @@ while has_active_jobs_and_work(jobs):
                 del running_work[pid]
                 job.total_running = job.total_running - 1
                 job.total_completed += 1
+                increment_plots_completed(increment=1, job_name=job.name, instrumentation_settings=instrumentation_settings)
 
         job.running_work = non_zombie_work
 
