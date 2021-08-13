@@ -17,7 +17,6 @@ def _get_metrics(instrumentation_settings):
         port = instrumentation_settings.get('prometheus_port', 9090)
         logging.info(f'Prometheus port: {port}')
         start_http_server(port)
-        print("Prometheus http server error")
         PROCESSED = True
 
 
